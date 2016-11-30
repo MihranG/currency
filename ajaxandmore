@@ -1,0 +1,77 @@
+
+$('document').ready(function () {
+
+    $("#dateCurr").on("submit", function (event) {
+        $("#errorMessage").hide();
+        $("#currencyList").empty();
+        $("#myChart").removeData();
+            var data = $("#dateCurr").serialize();
+            console.log(data);
+
+            $.ajax({
+                type: 'POST',
+                url: 'ajax.php',
+                data: data,
+
+                success: function (result) {
+
+                    var result = JSON.parse(result);
+                    var resultArray = result.data;
+                    console.log(resultArray);
+
+                    if (result.type == 1) {
+                        var values = [];
+                        var dates = [];
+                        for (i = 0; i < resultArray.length; i++) {
+                            console.log(resultArray[i].date + " : " + resultArray[i].rate);
+                            $("#currencyList").append("<li class='list-group-item'>" + resultArray[i].date + " : " + resultArray[i].rate + "</li>");
+                            values.push(resultArray[i].rate);
+                            dates.push(resultArray[i].date);
+                            if (result.error == true) {
+                                $("#errorMessage").show();
+                            }
+                        }
+                        new Chart("myChart", {
+                            type: 'line',
+                            data: {
+                                labels: dates,
+                                datasets: [
+                                    {
+                                        label: "Currency's tendency",
+                                        fill: false,
+                                        lineTension: 0.1,
+                                        backgroundColor: "rgba(75,192,192,0.4)",
+                                        borderColor: "rgba(75,192,192,1)",
+                                        borderCapStyle: 'butt',
+                                        borderDash: [],
+                                        borderDashOffset: 0.0,
+                                        borderJoinStyle: 'miter',
+                                        pointBorderColor: "rgba(75,192,192,1)",
+                                        pointBackgroundColor: "#fff",
+                                        pointBorderWidth: 1,
+                                        pointHoverRadius: 5,
+                                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                                        pointHoverBorderWidth: 2,
+                                        pointRadius: 1,
+                                        pointHitRadius: 10,
+                                        data: values,
+                                        spanGaps: false,
+                                    }
+                                ]
+                            },
+
+                        });
+                    } else if (result.type == 2) {
+                        $("#currencyList").append("<li class='list-group-item'>" + resultArray.date + " : " + resultArray.rate + "</li>");
+                    }
+                }
+
+
+            });
+            event.preventDefault();
+        }
+    )
+
+
+});
