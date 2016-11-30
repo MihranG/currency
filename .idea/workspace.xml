@@ -31,11 +31,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.html.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.html.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="489">
               <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -102,6 +112,7 @@
         <option value="$PROJECT_DIR$/main_styles.css" />
         <option value="$PROJECT_DIR$/ajaxandmore" />
         <option value="$PROJECT_DIR$/main.html.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -233,12 +244,12 @@
       <updated>1480415491929</updated>
       <workItem from="1480415493362" duration="12026000" />
       <workItem from="1480429022577" duration="18684000" />
-      <workItem from="1480491185022" duration="5451000" />
+      <workItem from="1480491185022" duration="5488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36161000" />
+    <option name="totallyTimeSpent" value="36198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="0" width="1932" height="1030" extended-state="0" />
@@ -397,6 +408,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
           <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
